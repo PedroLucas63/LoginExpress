@@ -8,6 +8,25 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+//! Define que o app vai passar informações via Json:
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+//! Faz a definição de uma seção no express:
+//* Importa o módulo:
+const session = require('express-session');
+
+//* Define o Proxy como ativo:
+app.set('trust proxy', 1);
+
+//* Configura a sessão:
+app.use(session({
+    secret: 'c18e192c1f74e99262ebbc3f12f7505babc98542',
+    resave: true,
+    saveUninitialized: true,
+    cookie: false
+}));
+
 //! Importar as rotas e configurar:
 const routers = require('./routers/routers');
 app.use(routers);

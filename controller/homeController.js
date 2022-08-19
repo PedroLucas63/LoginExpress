@@ -4,9 +4,9 @@ class HomeController{
     index(req, res) {
         res.render('index');
     }
-    //* Define o Login do Controller:
-    login(req, res){
-        res.render('pages/login')
+    //* Define o Home do Controller:
+    home(req, res){
+        res.render('pages/home');
     }
 }
 
