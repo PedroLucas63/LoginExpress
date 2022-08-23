@@ -1,5 +1,3 @@
-const session = require("express-session");
-
 //! Cria a classe de Controle da Seção:
 class SessionController{
     //* Cria um método inicial:
