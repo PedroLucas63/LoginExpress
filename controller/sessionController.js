@@ -1,8 +1,18 @@
+const session = require("express-session");
+
 //! Cria a classe de Controle da Seção:
 class SessionController{
     //* Cria um método inicial:
-    async index(req, res){
-        res.render('pages/login');
+    async home(req, res){
+        //? Verifica se o usuário está logado:
+        if(req.session.logado){
+            // Redireciona para o Home:
+            return res.redirect('home');
+        }
+
+        //? Redireciona para página de login:
+        return res.render('pages/login');
+        
     }
 
     //* Cria o método de logar:

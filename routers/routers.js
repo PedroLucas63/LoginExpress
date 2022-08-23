@@ -16,7 +16,7 @@ const auth = require('../middleware/auth');
 routers.get('/', Home.index);
 
 //* Definir rota Login:
-routers.get('/login', Session.index);
+routers.get('/login', Session.home);
 
 //* Define a rota de Logar:
 routers.post('/logar', Session.logar);

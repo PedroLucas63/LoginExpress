@@ -2,76 +2,48 @@
 <html lang="pt-br">
 
 <head>
+    <!--!Exportação do head e definição do Título!-->
     <%- include('../partials/head'); %>
-    <title>Login</title>
+        <title>Login</title>
 </head>
 
 <body>
+    <!--!Cabeçalho-->
     <header>
         <%- include('../partials/header'); %>
     </header>
 
+    <!--!Conteúdo principal-->
     <main>
-        <form action="/logar" method="POST">
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" id="email" class="form-control" name="email"/>
-                <label class="form-label" for="form2Example1">Email address</label>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control" name="password"/>
-                <label class="form-label" for="form2Example2">Password</label>
-            </div>
-
-            <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                        <label class="form-check-label" for="form2Example31"> Remember me </label>
-                    </div>
+        <!--*Formulário de Login-->
+        <div class="px-5 py-5" id="form1">
+            <form method="POST" action="/logar" class="form-data" v-if="!submitted">
+                <div class="forms-inputs mb-4"> <span>Email or username</span> <input autocomplete="off" type="text"
+                        v-model="email"
+                        v-bind:class="{'form-control':true, 'is-invalid' : !validEmail(email) && emailBlured}"
+                        v-on:blur="emailBlured = true" name="email">
+                    <div class="invalid-feedback">A valid email is required!</div>
                 </div>
-
-                <div class="col">
-                    <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
+                <div class="forms-inputs mb-4"> <span>Password</span> <input autocomplete="off" type="password"
+                        v-model="password"
+                        v-bind:class="{'form-control':true, 'is-invalid' : !validPassword(password) && passwordBlured}"
+                        v-on:blur="passwordBlured = true" name="password">
+                    <div class="invalid-feedback">Password must be 8 character!</div>
                 </div>
-            </div>
-
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-            <!-- Register buttons -->
-            <div class="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                </button>
-            </div>
-        </form>
+                <div class="mb-3"> <button v-on:click.stop.prevent="submit" class="btn btn-dark w-100">Login</button>
+                </div>
+            </form>
+        </div>
     </main>
 
+    <!--!Rodapé-->
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
 
-    <!--!Importação do Script do Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--!Importação do Scripts-->
+    <%- include('../partials/scripts'); %>
+
 </body>
+
 </html>

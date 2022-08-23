@@ -8,6 +8,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+//! Define a pasta public para conteúdo estático:
+app.use(express.static('./public'));
+
 //! Define que o app vai passar informações via Json:
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
