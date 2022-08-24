@@ -1,5 +1,6 @@
 //! Importar o Router e instancia:
 const { Router } = require('express');
+const homeController = require('../controller/homeController');
 const routers = new Router();
 
 //! Importa os Controllers:
@@ -16,7 +17,7 @@ const auth = require('../middleware/auth');
 routers.get('/', Home.index);
 
 //* Definir rota Login:
-routers.get('/login', Session.home);
+routers.get('/login', Session.login);
 
 //* Define a rota de Logar:
 routers.post('/logar', Session.logar);

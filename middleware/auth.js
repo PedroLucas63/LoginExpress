@@ -1,7 +1,6 @@
 //! Cria a função de autenticação:
 const auth = (req, res, next) => {
     //* Verifica se a seção está logada:
-    console.log(req.session.logado);
     if(req.session.logado){
         //? Continua:
         next();

@@ -6,8 +6,8 @@ body{
     justify-content: space-between;
     background-color: rgb(235, 235, 235);
 }
-
-/*!Configuração do Main Simples*/
+/*!Configuração das tags*/
+/**Configuração do Main*/
 main{
     height: 30vw;
     width: 30vw;
@@ -19,6 +19,17 @@ main{
     border-radius: 20px;
     box-shadow: 5px 5px 10px #444444;
     flex-wrap: wrap;
+}
+
+/**Configuração do input*/
+input{
+    width: 100%;
+}
+
+/*!Configurações das classes*/
+.alert-danger{
+    max-height: 45px;
+    padding-top: 10px;
 }
 
 /*!Media querrys*/

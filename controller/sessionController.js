@@ -1,16 +1,15 @@
 //! Cria a classe de Controle da Seção:
 class SessionController{
     //* Cria um método inicial:
-    async home(req, res){
+    async login(req, res){
         //? Verifica se o usuário está logado:
         if(req.session.logado){
             // Redireciona para o Home:
-            return res.redirect('home');
+            return res.redirect('/home');
         }
 
         //? Redireciona para página de login:
-        return res.render('pages/login');
-        
+        return res.render('pages/login', {logado: req.session.logado, erro: ""});
     }
 
     //* Cria o método de logar:
@@ -27,12 +26,12 @@ class SessionController{
         //? Verifica se as informações estão corretas:
         if(!(email === user.email && password === user.password)){
             // Retorna para a página de login:
-            return res.render('pages/login');
+            return res.render('pages/login', {logado: req.session.logado, erro: "E-mail ou senha errados!"});
         }
         //? Salva o login:
         req.session.logado = true;
         //? Redireciona o usuário para Home:
-        return res.redirect('home');
+        return res.redirect('/home');
     }
     //* Define o método de Logout:
     logout(req, res){

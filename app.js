@@ -24,7 +24,7 @@ app.set('trust proxy', 1);
 
 //* Configura a sessão:
 app.use(session({
-    secret: 'c18e192c1f74e99262ebbc3f12f7505babc98542',
+    secret: '3a578703b77728e4a3620a24611950d5f1f649f4', //?Super$#90R
     resave: true,
     saveUninitialized: true,
     cookie: false
