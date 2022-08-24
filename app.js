@@ -15,7 +15,7 @@ app.use(express.static('./public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//! Faz a definição de uma seção no express:
+//! Faz a definição de uma sessão no express:
 //* Importa o módulo:
 const session = require('express-session');
 

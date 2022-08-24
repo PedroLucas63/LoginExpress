@@ -1,4 +1,4 @@
-//! Cria a classe de Controle da Seção:
+//! Cria a classe de Controle da Sessão:
 class SessionController{
     //* Cria um método inicial:
     async login(req, res){
