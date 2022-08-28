@@ -6,7 +6,7 @@ class HomeController{
     }
     //* Define o Home do Controller:
     home(req, res){
-        res.render('pages/home', {logado: req.session.logado});
+        res.render('pages/home', {logado: req.session.logado, users: ['Pedro Lucas', 'Luiza Nicole', 'Diego Dantas', 'Marcos', 'José Arnoldo']});
     }
 }
 

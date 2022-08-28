@@ -36,9 +36,9 @@ app.use(routers);
 
 //! Definir a porta e iniciar o servidor:
 const hostname = 'localhost';
-const port = 3000;
+const port = 900;
 
 //* Iniciar o servidor:
-app.listen(port, ()=>{
+app.listen(port, hostname, ()=>{
     console.log(`Servidor iniciado em http://${hostname}:${port} (Clique Ctrl+C)`);
 });

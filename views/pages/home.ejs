@@ -10,16 +10,27 @@
     <%- include('../partials/header'); %>
 
     <!--!Conteúdo principal-->
-    <main>
+    <main id="homepage">
         <!--*Título da página-->
         <h1>Seja bem-vindo!</h1>
 
-        <!--*Botão de saída-->
-        <a href="/logout">
-            <button class="btn btn-primary btn-xs">
-                Sair
+        <!--*Seção de usuários-->
+        <section>
+            <!--?Título da seção-->
+            <h2 class="text-center">Usuários</h2>
+
+            <!--?Lista dos usuários-->
+            <% for(var i = 0; i < users.length && i < 4; i++) { %>
+                <p>
+                    <%= users[i] %>
+                </p>
+            <% } %>
+
+            <!--?Botão de estender a visualização-->
+            <button class="btn btn-primary w-100">
+                Visualizar
             </button>
-        </a>
+        </section>
     </main>
 
     <!--!Rodapé-->

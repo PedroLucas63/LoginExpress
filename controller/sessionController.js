@@ -31,7 +31,7 @@ class SessionController{
         //? Salva o login:
         req.session.logado = true;
         //? Redireciona o usuário para Home:
-        return res.redirect('/home');
+        return res.redirect('/home' );
     }
     //* Define o método de Logout:
     logout(req, res){

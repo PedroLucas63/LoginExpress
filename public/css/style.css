@@ -21,6 +21,14 @@ main{
     flex-wrap: wrap;
 }
 
+/**Configuração da Seção de Usuários*/
+section {
+    width: 80%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 /**Configuração do input*/
 input{
     width: 100%;
@@ -30,6 +38,12 @@ input{
 .alert-danger{
     max-height: 45px;
     padding-top: 10px;
+}
+
+/*!Configurações dos ids*/
+#homepage{
+    height: 70vh;
+    width: 90vw;
 }
 
 /*!Media querrys*/
