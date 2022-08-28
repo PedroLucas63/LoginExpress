@@ -25,6 +25,9 @@ routers.post('/logar', Session.logar);
 //* Define a rota de Home:
 routers.get('/home', auth, Home.home);
 
+//* Define a rota de usuários:
+routers.get('/users', auth, Home.users);
+
 //* Define a rota de Logout:
 routers.get('/logout', Session.logout);
 
