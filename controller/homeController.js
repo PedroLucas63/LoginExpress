@@ -17,6 +17,13 @@ class HomeController{
     users(req, res){
         res.render('pages/users', {logado: req.session.logado, users: users});
     }
+
+    //* Define a página de registrar usuários:
+    register(req, res){
+        res.render('pages/register', {logado: req.session.logado});
+    }
+
+    //* Define a página de regist
 }
 
 //! Exportar o HomeController:

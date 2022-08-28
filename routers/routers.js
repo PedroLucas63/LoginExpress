@@ -28,6 +28,9 @@ routers.get('/home', auth, Home.home);
 //* Define a rota de usuários:
 routers.get('/users', auth, Home.users);
 
+//* Define a rota de registro de usuários:
+routers.get('/register', auth, Home.register);
+
 //* Define a rota de Logout:
 routers.get('/logout', Session.logout);
 
