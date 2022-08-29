@@ -38,11 +38,13 @@
                             <td> <%= i %> </td>
                             <td> <%= users[i]['name'] %> </td>
                             <td>
-                                <a href="/users/update/<%= i %>">
-                                    <button class="btn btn-info">Editar</button>
+                                <a href="/users/update/<%= i %>" class="btn btn-info">
+                                    Editar
                                 </a>
-        
-                                <button class="btn btn-danger">Deletar</button>
+                                
+                                <a href="/users/delete/<%= i %>" class="btn btn-danger">
+                                    Deletar
+                                </a>
                             </td>
                         </tr>
                     <% } %>

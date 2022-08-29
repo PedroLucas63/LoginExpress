@@ -34,6 +34,9 @@ routers.get('/users/register', auth, Home.register);
 //* Define a rota de atualizar usuários:
 routers.get('/users/update/:id', auth, Home.update);
 
+//* Define a rota de deletar usuários:
+routers.get('/users/delete/:id', auth, Home.delete);
+
 //* Define a rota de Logout:
 routers.get('/logout', Session.logout);
 

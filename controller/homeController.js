@@ -53,6 +53,11 @@ class HomeController{
     update(req, res){
         res.render('pages/update', {logado: req.session.logado, users: users, id: req.params.id});
     }
+
+    //* Define a página de deletar usuários:
+    delete(req, res){
+        res.render('pages/delete', {logado: req.session.logado, users: users, id:  req.params.id});
+    }
 }
 
 //! Exportar o HomeController:
