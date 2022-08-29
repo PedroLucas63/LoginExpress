@@ -1,5 +1,31 @@
 //! Define os usuários:
-var users = ['Pedro Lucas', 'Luiza Nicole', 'Diego Dantas', 'Marcos', 'José Arnoldo', 'Lucas Paolo', 'Gabriel Santana', 'Jorge Amado', 'Luan Santana'];
+var users = [
+    {
+        'name':'Pedro Lucas',
+        'email':'pedro.lucas@gmail.com',
+        'password':'123456'    
+    }, 
+    {
+        'name':'Luiza Nicole',
+        'email': 'luiza.nicole@gmail.com',
+        'password':'202020'    
+    },
+    {
+        'name': 'André Marques',
+        'email': 'andre.marques@gmail.com',
+        'password': 'hamburguer10'
+    },
+    {
+        'name': 'Jorge Amado',
+        'email': 'jorge.amado@gmail.com',
+        'password': 'sorvete'
+    },
+    {
+        'name': 'Josué Gonzále',
+        'email': 'josue.gonzale@gmail.com',
+        'password': 'lula2020'
+    }
+];
 
 //! Cria a classe de controller:
 class HomeController{
@@ -23,7 +49,10 @@ class HomeController{
         res.render('pages/register', {logado: req.session.logado});
     }
 
-    //* Define a página de regist
+    //* Define a página de atualizar usuários:
+    update(req, res){
+        res.render('pages/update', {logado: req.session.logado, users: users, id: req.params.id});
+    }
 }
 
 //! Exportar o HomeController:

@@ -36,9 +36,12 @@
                     <% for(var i = 0; i < users.length; i++) { %>
                         <tr>
                             <td> <%= i %> </td>
-                            <td> <%= users[i] %> </td>
+                            <td> <%= users[i]['name'] %> </td>
                             <td>
-                                <button class="btn btn-info">Editar</button>
+                                <a href="/users/update/<%= i %>">
+                                    <button class="btn btn-info">Editar</button>
+                                </a>
+        
                                 <button class="btn btn-danger">Deletar</button>
                             </td>
                         </tr>
