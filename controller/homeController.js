@@ -51,12 +51,14 @@ class HomeController{
 
     //* Define a página de atualizar usuários:
     update(req, res){
-        res.render('pages/update', {logado: req.session.logado, users: users, id: req.params.id});
+        var id = req.params.id
+        res.render('pages/update', {logado: req.session.logado, user: users[id]});
     }
 
     //* Define a página de deletar usuários:
     delete(req, res){
-        res.render('pages/delete', {logado: req.session.logado, users: users, id:  req.params.id});
+        var id = req.params.id
+        res.render('pages/delete', {logado: req.session.logado, user: users[id], id: id});
     }
 }
 
