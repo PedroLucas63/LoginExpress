@@ -30,7 +30,7 @@ app.use(session({
     cookie: false
 }));
 
-//! Importar as rotas e configurar:
+//! Importa as rotas e configura:
 const routers = require('./routers/routers');
 app.use(routers);
 
