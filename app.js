@@ -36,7 +36,7 @@ app.use(routers);
 
 //! Definir a porta e iniciar o servidor:
 const hostname = 'localhost';
-const port = 900;
+const port = 3000;
 
 //* Iniciar o servidor:
 app.listen(port, hostname, ()=>{
